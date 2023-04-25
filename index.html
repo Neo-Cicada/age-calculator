@@ -20,17 +20,42 @@
       <div class="date-box">
         <div class="date day">
           <label for="day" class="label">Day</label>
-          <input class="input" placeholder="DD" id="day" />
+          <input class="input"
+           type="number"
+           placeholder="DD" 
+           id="day" 
+           min="1" 
+           max="31"
+           required/>
+          <span class="errorone error"></span>
         </div>
 
         <div class="date month">
           <label for="month" class="label">Month</label>
-          <input class="input" type="number" placeholder="MM" id="month">
+          <input 
+            class="input" 
+            type="number" 
+            placeholder="MM" 
+            id="month" 
+            min="1"
+            max="12"
+
+            required>
+          <span class="errortwo error"></span>
         </div>
 
         <div class="date year">
           <label for="year" class="label"> Year</label>
-          <input class="input" type="year" placeholder="YYYY" id="year">
+          <input 
+            class="input" 
+            type="number" 
+            placeholder="YYYY"
+            min="1920"
+            max="2023" 
+            id="year" 
+
+            required>
+          <span class="errorthree error"></span>
         </div>
 
         <button onclick="calculate()">Arrow</button>

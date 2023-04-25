@@ -52,7 +52,17 @@ main{
     width: 135px;
     font-size: 36px;
 
+
 }
+/* 
+input:invalid {
+    border: 1px solid red;
+  } */
+.error{
+    color: red;
+    font-style: italic;
+}
+
 ::-webkit-input-placeholder{
     display: flex;
     font-size: 32px;
