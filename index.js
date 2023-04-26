@@ -28,13 +28,13 @@ const calculate = () =>{
     const valueM = month.value
     const valueY = year.value 
 
-
-    console.log(valueD)
-    console.log(valueM)
-    console.log(valueY)
+    
+    
     const torf = validate(valueD, valueM, valueY);
-    console.log(torf)
+    
     if(torf){
+
+    correcting()
     var birthday = new Date(`${valueY}-${valueM}-${valueD}`);
    
    
@@ -45,14 +45,9 @@ const calculate = () =>{
     resultYear.innerHTML =`${age.years}`
     console.log(age);
     }
-  
-  else{
-    for(var i = 0; i<3; i++){
-      const label = document.getElementsByClassName('label')[i].style.color= "red";
-    }
-    for(var i = 0; i<3; i++){
-      const border = document.getElementsByTagName('input')[i].style.border = "1px solid red";
-    }
+
+    else{
+    looping();
     
 
 
@@ -64,14 +59,36 @@ const calculate = () =>{
 }
 
 const validate = (d, m, y) => {
-  const vd = d < 31 && d > 1;
-  const vm = m < 12 && m > 1;
-  const vy = y < 2023 && y > 1920
+  const vd = d <= 31 && d >= 1;
+  const vm = m <= 12 && m >= 1;
+  const vy = y <= 2023 && y >= 1920
 
   if(vd && vm && vy){
     return(true)    
   }
   else{
     return(false)
+  }
+}
+
+const looping = () => {
+  for(var i = 0; i<3; i++){
+    const label = document.getElementsByClassName('label')[i].style.color= "red";
+  }
+  for(var i = 0; i<3; i++){
+    const border = document.getElementsByTagName('input')[i].style.border = "1px solid red";
+  }
+}
+
+const correcting = () =>{
+  errorone.innerHTML = ""
+  errortwo.innerHTML = ""
+  errorthree.innerHTML = ""
+
+  for(var i = 0; i<3; i++){
+    const label = document.getElementsByClassName('label')[i].style.color= "black";
+  }
+  for(var i = 0; i<3; i++){
+    const border = document.getElementsByTagName('input')[i].style.border = "1px solid black";
   }
 }

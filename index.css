@@ -31,15 +31,22 @@ main{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.date-box{
+.date-box {
     display: flex;
-    border-bottom: 1px solid hsl(0, 1%, 44%);
     gap: 20px;
     height: 120px;
     min-width: 90%;
     padding-top: 5%;
-
-}
+    position: relative; /* add a relative position to the container */
+  }
+  .date-box::after {
+    content: "";
+    position: absolute;
+    bottom: 0; /* position the element at the bottom of the container */
+    left: 0; /* position the element 25% from the left of the container */
+    width: 72%; /* set the width to 50% */
+    border-bottom: 1px solid hsl(0, 1%, 44%); /* add the border */
+  }
 .date{
     display: flex;
     flex-direction: column;
@@ -83,6 +90,23 @@ label{
     font-size: 18px;
     color: hsl(0, 1%, 44%);
 }
+
+button {
+    position: relative;
+    top: 120px;
+    transform: translateY(-50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: none;
+    background-color: hsl(259, 100%, 65%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+button:active{
+    background-color: black;
+}  
 
 @media (max-width: 700px){
 
