@@ -110,13 +110,57 @@ button:active{
 }  
 
 @media (max-width: 700px){
-
     .box{
-      border-top-right-radius: 7%;
-      border-top-left-radius: 7%;
-      border-bottom-left-radius: 7%;
+      border-radius: 7%;
       min-width: 90%;
       min-height: 80%;
     }
-
-}
+    .date-box {
+        display: flex;
+        gap: 20px;
+        height: 120px;
+        min-width: 90%;
+        padding-top: 5%;
+        position: relative; /* add a relative position to the container */
+        justify-content: center; /* center the contents horizontally */
+      }
+      
+      .input {
+        text-align: start;
+        padding: 10px 10px 10px;
+        flex-grow: 1; /* allow the input field to expand vertically */
+        font-size: 36px;
+        display: flex; /* center the input field vertically */
+        justify-content: center; /* center the input field horizontally */
+        align-items: center; /* center the input field vertically */
+      }
+      
+    .date-box::after{
+      display: none;
+    }
+    .input{
+      height: auto;
+      margin-bottom: 20px;
+      width: 100%;
+      font-size: 24px;
+      text-align: center;
+    }
+    .result{
+      font-size: 3em;
+    }
+    label{
+      font-size: 16px;
+    }
+    button {
+      position: static;
+      top: auto;
+      left: auto;
+      transform: none;
+      margin-top: 20px;
+      width: 50%;
+      height: 50px;
+      border-radius: 25px;
+      font-size: 18px;
+    }
+  }
+  
