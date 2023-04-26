@@ -44,7 +44,7 @@ main{
     position: absolute;
     bottom: 0; /* position the element at the bottom of the container */
     left: 0; /* position the element 25% from the left of the container */
-    width: 72%; /* set the width to 50% */
+    width: 88.5%; /* set the width to 50% */
     border-bottom: 1px solid hsl(0, 1%, 44%); /* add the border */
   }
 .date{
@@ -94,6 +94,7 @@ label{
 button {
     position: relative;
     top: 120px;
+    left: 120px;
     transform: translateY(-50%);
     width: 75px;
     height: 75px;
